@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login | TaifaBridge</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <!--Favicon, Logo for the website on Browsers' tabs-->
+        <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+        <link rel="shortcut icon" href="favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="TaifaNexus " />
+        <link rel="manifest" href="/site.webmanifest" />
+    </head>
+    <body data-page="signin">
+        <div class="page-bg" aria-hidden="true"></div>
+        <main class="auth-shell">
+            <section class="auth-card">
+                <div class="auth-header">
+                    <div class="brand">
+                        <img class="brand-logo" src="TaifaNexusGroup.jpg" alt="Taifa Nexus Group logo">
+                        <div>
+                            <p class="brand-label">Nexus</p>
+                            <p class="brand-note">Secure access for bridge team members</p>
+                        </div>
+                    </div>
+
+                    <h1>Welcome back</h1>
+                    <p>Log in to continue to your dashboard and access project tools.</p>
+                </div>
+
+                <form class="auth-form" action="#" method="post" novalidate>
+                    <div class="field">
+                        <label for="email">Email address</label>
+                        <input id="email" name="email" type="email" placeholder="you@example.com" required aria-describedby="emailError">
+                        <p class="field-error" id="emailError" aria-live="polite"></p>
+                    </div>
+
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input id="password" name="password" type="password" placeholder="Enter your password" required aria-describedby="passwordError">
+                        <p class="field-error" id="passwordError" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-row">
+                        <label class="checkbox">
+                            <input type="checkbox" name="remember">
+                            <span>Remember me</span>
+                        </label>
+                        <a class="link-secondary" href="reset.html">Forgot password?</a>
+                    </div>
+
+                    <button class="btn-primary" type="submit">Sign in</button>
+                </form>
+
+                <div class="auth-footer">
+                    <p>New here? <a href="register.html">Create an account</a></p>
+                </div>
+
+            <div class="modal-overlay validation-modal" id="validationModal" role="dialog" aria-modal="true" aria-labelledby="validationTitle" aria-hidden="true">
+                <div class="modal-panel warning" role="document" tabindex="-1">
+                    <span class="modal-icon warning">⚠️</span>
+                    <h2 id="validationTitle">Please complete the form</h2>
+                    <p class="modal-message">Please fill in all required fields correctly before proceeding.</p>
+                    <ul class="modal-list" aria-live="polite"></ul>
+                    <button type="button" class="btn-primary modal-close">OK</button>
+                </div>
+            </div>
+
+                <div class="modal-overlay success-modal" id="successModal" role="dialog" aria-modal="true" aria-labelledby="successTitle" aria-hidden="true">
+                    <div class="modal-panel" role="document" tabindex="-1">
+                        <span class="modal-icon">✔</span>
+                        <h2 id="successTitle">Sign in successful</h2>
+                        <p class="modal-message">You have successfully signed in.</p>
+                        <button type="button" class="btn-primary modal-close">Continue</button>
+                    </div>
+                </div>
+
+                <script src="js/auth.js" defer></script>
+            </section>
+        </main>
+    </body>
+</html>

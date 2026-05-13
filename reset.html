@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Password Reset | TaifaBridge</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+        <link rel="shortcut icon" href="favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="TaifaNexus" />
+        <link rel="manifest" href="/site.webmanifest" />
+    </head>
+    <body data-page="reset">
+        <div class="page-bg" aria-hidden="true"></div>
+        <main class="auth-shell">
+            <section class="auth-card">
+                <div class="auth-header">
+                    <div class="brand">
+                        <img class="brand-logo" src="TaifaNexusGroup.jpg" alt="Taifa Nexus Group logo">
+                        <div>
+                            <p class="brand-label">TaifaBridge</p>
+                            <p class="brand-note">Password recovery for bridge team members</p>
+                        </div>
+                    </div>
+
+                    <h1>Reset your password</h1>
+                    <p>Enter your registered email and we’ll send a password reset link if the account exists.</p>
+                </div>
+
+                <form class="auth-form" action="#" method="post" novalidate>
+                    <div class="field">
+                        <label for="email">Email address</label>
+                        <input id="email" name="email" type="email" placeholder="you@example.com" required aria-describedby="emailError">
+                        <p class="field-error" id="emailError" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="btn-primary" type="submit">Send reset link</button>
+                    </div>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Remembered your password? <a href="index.html">Sign in</a></p>
+                </div>
+
+                <div class="modal-overlay validation-modal" id="validationModal" role="dialog" aria-modal="true" aria-labelledby="validationTitle" aria-hidden="true">
+                    <div class="modal-panel warning" role="document" tabindex="-1">
+                        <span class="modal-icon warning">⚠️</span>
+                        <h2 id="validationTitle">Please enter your email</h2>
+                        <p class="modal-message">Please provide a valid email address to continue.</p>
+                        <ul class="modal-list" aria-live="polite"></ul>
+                        <button type="button" class="btn-primary modal-close">OK</button>
+                    </div>
+                </div>
+
+                <div class="modal-overlay success-modal" id="resetSuccessModal" role="dialog" aria-modal="true" aria-labelledby="resetSuccessTitle" aria-hidden="true">
+                    <div class="modal-panel" role="document" tabindex="-1">
+                        <span class="modal-icon">✔</span>
+                        <h2 id="resetSuccessTitle">Reset link sent</h2>
+                        <p>If an account exists with this email, a password reset link has been sent.</p>
+                        <button type="button" class="btn-primary modal-close">Back to Sign In</button>
+                    </div>
+                </div>
+
+                <script src="js/auth.js" defer></script>
+            </section>
+        </main>
+    </body>
+</html>
